@@ -6,8 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Serif+Caption" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <title>ABP Co-browse</title>
 </head>
 <body>
+    <div id="container-cobrowse">
+        <div class="row">
+            <div id="wrapper" class="col-xs-12 col-md-8 col-md-offset-2">
+                <div class="row">
+                    <h1>ABP Co-browse</h1>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="container" id="instruction">
+                                        <p id="instruction-text">Gelieve graag onderstaande sessie-ID aan uw ABP vertegenwoordiger te verstrekken</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container" id="session-id">
+                                <p id="sessidtarget">...</p>
+                            </div>
+                            <div class="container" id="disclaimer">
+                                <p id="disclaimer-text">
+                                    Door de ABP-vertegenwoordiger uw sessie-ID te verstrekken, geeft u een ABP-vertegenwoordiger toestemming om uw acties te bekijken op abp.nl. De volgende voorwaarden zijn van toepassing:
+                                    <br>
+                                    De ABP-vertegenwoordiger kan alleen acties zien die zijn uitgevoerd op websites van abp.nl. Andere pagina's, inclusief browsertabbladen die al open zijn, kunnen niet worden gezien door de ABP-vertegenwoordiger.
+                                    <br>
+                                    U kunt de co-browsesessie op elk gewenst moment en om welke reden dan ook beëindigen. Om uw sessie te beëindigen, klikt u op de "X" in het menu aan de linkerkant van uw scherm of sluit u uw browservenster af.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="footer">
 
+</div>
+<script>
+    (function(s,u,r,f,l,y){s[f]=s[f]||{init:function(){s[f].q=arguments}};
+    l=u.createElement(r);y=u.getElementsByTagName(r)[0];l.async=1;
+    l.src='https://surfly.com/surfly.js';y.parentNode.insertBefore(l,y);})
+    (window,document,'script','Surfly');
+
+
+    var settings={widgetkey:'05e3702cc0e7431283cea849766c519e', hide_until_agent_joins: true, splash: false};
+    window.addEventListener('DOMContentLoaded', function() {
+        Surfly.init(settings, function(init) {
+            if (init.success) {
+                if(!Surfly.currentSession){
+                    Surfly.session()
+                    .on('session_started', function(session, event) {
+                       // send the pin to the current session
+                       document.getElementById("sessidtarget").innerText = "" + session.pin;
+                    })
+                    .on('viewer_joined', function(session, event) {
+                    // if a viewer joins and they are the first then redirect to home page
+                        if(event.count==1){
+                          session.relocate("https://www.abp.nl/");
+                        }
+                    }).startLeader();
+                }
+            }
+        });
+    });
+</script>
 </body>
+</html>
