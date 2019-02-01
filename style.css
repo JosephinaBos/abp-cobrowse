@@ -22,24 +22,22 @@ h1 {
     font-family: 'PT Serif Caption', serif;
     color: white;
     font-size: 42px;
-    margin: 0px 12px;
+    margin: 0px 0px 20px 12px;
 }
 
 #container-cobrowse {
     position:absolute;
     left:0;
     right:0;
-    margin-left:auto;
-    margin-right:auto;
     width: 700px;
-    margin: 50px auto;
+    margin: 70px auto 0px auto;
 }
 
-.container {
+.fields {
     background-color: white;
     width: 700px;
     margin: 12px;
-    padding: 25px;
+    padding: 22px;
     letter-spacing: 0.5px;
 }
 
@@ -66,15 +64,41 @@ p#instruction-text {
     background-color: white;
 }
 
+#footer-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 1080px;
+}
+
+.row {
+    margin-left: -6px;
+    margin-right: -6px;
+}
+
 #links-container {
-    width: 300px;
+    position: relative;
+    float: left;
+    list-style-type: none;
+    margin: 12px 0 0 0;
+    width: auto;
+    padding: 0;
 }
 
 ul#links li {
     display: inline;
-    list-style-type: none;
+    /*list-style-type: none;*/
     color: #0057a3;
-    text-align: left;
+    float: left;
+    display: block;
+    width: 95px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 0 0 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 ul#links li:hover {
@@ -87,5 +111,9 @@ ul#links li:active {
 
 #logo {
     width: 50px;
-    text-align: right;
+    float: right;
+    width: 400px;
+    height: 70px;
+    margin-right: 12px;
+    font-size: 0;
 }
