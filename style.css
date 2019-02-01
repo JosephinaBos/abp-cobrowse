@@ -10,6 +10,8 @@ body {
 h1 {
     font-family: 'PT Serif Caption', serif;
     color: white;
+    font-size: 42px;
+    margin: 0px 12px;
 }
 
 #container-cobrowse {
@@ -29,7 +31,11 @@ h1 {
 }
 
 #instruction {
-    margin: -8px;
+    margin-bottom: -9px;
+}
+
+#instruction-text {
+    margin: -10px;
 }
 
 #footer {
