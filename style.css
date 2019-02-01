@@ -64,7 +64,7 @@ p#instruction-text {
     background-color: white;
 }
 
-#footer-container {
+#container {
     margin-right: auto;
     margin-left: auto;
     padding-left: 6px;
@@ -112,8 +112,8 @@ ul#links li:active {
 #logo {
     width: 50px;
     float: right;
-    width: 400px;
+    width: 90px;
     height: 70px;
-    margin-right: 12px;
+    margin: 30px 45px 0px 0px;
     font-size: 0;
 }
