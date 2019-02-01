@@ -20,6 +20,8 @@ h1 {
     right:0;
     margin-left:auto;
     margin-right:auto;
+    width: 700px;
+    margin: 50px auto;
 }
 
 .container {
@@ -31,11 +33,15 @@ h1 {
 }
 
 #instruction {
-    margin-bottom: -9px;
+    margin-bottom: -10px;
 }
 
-#instruction-text {
+p#instruction-text {
     margin: -10px;
+}
+
+#sessidtarget {
+    text-align: center;
 }
 
 #footer {
