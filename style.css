@@ -5,6 +5,15 @@ body {
 
 h1 {
     font-family: 'PT Serif Caption', serif;
+    color: white;
+}
+
+#container-cobrowse {
+    position:absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .container {
@@ -24,7 +33,7 @@ h1 {
     background-color: white;
 }
 
-#links {
+ul#links li {
     display: inline;
     list-style-type: none;
     color: #0057a3;
