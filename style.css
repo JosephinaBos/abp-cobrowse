@@ -18,7 +18,7 @@ body {
     padding-bottom: 100px;
 }
 
-h1 {
+#title {
     font-family: 'PT Serif Caption', serif;
     color: white;
     font-size: 42px;
