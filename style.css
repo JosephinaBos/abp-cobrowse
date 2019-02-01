@@ -3,6 +3,10 @@ body {
     font-family: 'Open Sans', sans-serif;;
 }
 
+#wrapper {
+    position: relative;
+}
+
 h1 {
     font-family: 'PT Serif Caption', serif;
     color: white;
@@ -18,9 +22,10 @@ h1 {
 
 .container {
     background-color: white;
-    width: 600px;
-    margin: 10px;
-    padding: 30px;
+    width: 700px;
+    margin: 12px;
+    padding: 25px;
+    letter-spacing: 0.5px;
 }
 
 #instruction {
@@ -28,6 +33,10 @@ h1 {
 }
 
 #footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100vw;
     height: 100px;
     background-color: white;
