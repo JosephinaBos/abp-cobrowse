@@ -2,7 +2,12 @@ body {
     background-image: url('static/blue-background.png');
     font-family: 'Open Sans', sans-serif;
     position: relative;
-    height: 100%;
+    height: 100vh;
+    margin: -8px;
+    -webkit-background-size: auto; /* For WebKit*/
+    -moz-background-size: auto;    /* Mozilla*/
+    -o-background-size: auto;      /* Opera*/
+    background-size: auto;         /* Generic*/
 }
 
 #wrapper {
@@ -61,11 +66,23 @@ p#instruction-text {
     background-color: white;
 }
 
+#links-container {
+    width: 300px;
+}
+
 ul#links li {
     display: inline;
     list-style-type: none;
     color: #0057a3;
     text-align: left;
+}
+
+ul#links li:hover {
+    text-decoration: none;
+}
+
+ul#links li:active {
+    color: #0057a3;
 }
 
 #logo {
