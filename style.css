@@ -1,7 +1,37 @@
 body {
     background-image: url('static/blue-background.png');
+    font-family: 'Open Sans', sans-serif;;
+}
+
+h1 {
+    font-family: 'PT Serif Caption', serif;
 }
 
 .container {
     background-color: white;
+    width: 600px;
+    margin: 10px;
+    padding: 30px;
+}
+
+#instruction {
+    margin: -8px;
+}
+
+#footer {
+    width: 100vw;
+    height: 100px;
+    background-color: white;
+}
+
+#links {
+    display: inline;
+    list-style-type: none;
+    color: #0057a3;
+    text-align: left;
+}
+
+#logo {
+    width: 50px;
+    text-align: right;
 }
