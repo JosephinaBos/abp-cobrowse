@@ -4,7 +4,6 @@ body {
     font-size: 16px;
     position: relative;
     height: 100vh;
-    margin: -8px;
     -webkit-background-size: auto; /* For WebKit*/
     -moz-background-size: auto;    /* Mozilla*/
     -o-background-size: auto;      /* Opera*/
@@ -40,6 +39,12 @@ body {
     margin: 12px;
     padding: 22px;
     letter-spacing: 0.7px;
+}
+
+h2 {
+    font-family: 'PT Serif Caption', serif;
+    color: #0057a3;
+    font-size: 28px;
 }
 
 #instruction {
@@ -82,7 +87,7 @@ p#instruction-text {
     position: relative;
     float: left;
     list-style-type: none;
-    margin: 12px 0 0 0;
+    margin: 29px 0 0 0;
     width: auto;
     padding: 0;
 }
@@ -100,6 +105,7 @@ ul#links li {
     padding: 10px 0 0 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: underline;
 }
 
 ul#links li:hover {
@@ -114,7 +120,6 @@ ul#links li:active {
     width: 50px;
     float: right;
     width: 90px;
-    height: 70px;
     margin: 30px 45px 0px 0px;
     font-size: 0;
 }
