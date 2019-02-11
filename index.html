@@ -52,7 +52,15 @@
     (window,document,'script','Surfly');
 
 
-    var settings={widgetkey:'05e3702cc0e7431283cea849766c519e', hide_until_agent_joins: true, splash: false};
+    var settings = {
+        widgetkey:'05e3702cc0e7431283cea849766c519e',
+        hide_until_agent_joins: true,
+        splash: false,
+        docked_only: true,
+        videochat: false,
+        agent_can_request_control: true
+    };
+
     window.addEventListener('DOMContentLoaded', function() {
         Surfly.init(settings, function(init) {
             if (init.success) {
